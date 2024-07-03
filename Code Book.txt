@@ -1,0 +1,71 @@
+CodeBook.md
+---
+title: "Code Book"
+author: Long Dang
+date: 2024-7-4 3:02AM
+output: md_document
+---
+
+# Code Book
+
+Welcome to the Code Book for my tidy data set! This data was collected from the accelerometers of the Samsung Galaxy S smartphone and has been cleaned and processed to make it ready for analysis.
+
+## Data Set Information
+
+This data set includes information collected from the accelerometers on Samsung Galaxy S smartphones. The data has been cleaned up and combined to make it ready for analysis. The original data can be found [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
+
+## Variables
+
+Here’s a quick guide to the variables in the tidy data set. All measurements are normalized and bounded within [-1,1]. 
+
+- **`subject`**: The ID of the person who performed the activity (ranges from 1 to 30).
+- **`activity`**: The activity performed by the subject. It can be one of the following:
+  - WALKING
+  - WALKING_UPSTAIRS
+  - WALKING_DOWNSTAIRS
+  - SITTING
+  - STANDING
+  - LAYING
+
+### Measurement Variables
+
+All measurement variables are averaged for each subject and activity. The following are the measurement variables, their units, and summaries:
+
+- **`tBodyAcc-mean()-X`**, **`tBodyAcc-mean()-Y`**, **`tBodyAcc-mean()-Z`**: Mean values of body acceleration signals in the X, Y, and Z directions. Units: Standardized to have a mean of 0 and a standard deviation of 1.
+- **`tBodyAcc-std()-X`**, **`tBodyAcc-std()-Y`**, **`tBodyAcc-std()-Z`**: Standard deviation values of body acceleration signals in the X, Y, and Z directions. Units: Standardized to have a mean of 0 and a standard deviation of 1.
+
+- **`tGravityAcc-mean()-X`**, **`tGravityAcc-mean()-Y`**, **`tGravityAcc-mean()-Z`**: Mean values of gravity acceleration signals in the X, Y, and Z directions. Units: Standardized to have a mean of 0 and a standard deviation of 1.
+- **`tGravityAcc-std()-X`**, **`tGravityAcc-std()-Y`**, **`tGravityAcc-std()-Z`**: Standard deviation values of gravity acceleration signals in the X, Y, and Z directions. Units: Standardized to have a mean of 0 and a standard deviation of 1.
+
+- **`tBodyAccJerk-mean()-X`**, **`tBodyAccJerk-mean()-Y`**, **`tBodyAccJerk-mean()-Z`**: Mean values of body acceleration jerk signals in the X, Y, and Z directions. Units: Standardized to have a mean of 0 and a standard deviation of 1.
+- **`tBodyAccJerk-std()-X`**, **`tBodyAccJerk-std()-Y`**, **`tBodyAccJerk-std()-Z`**: Standard deviation values of body acceleration jerk signals in the X, Y, and Z directions. Units: Standardized to have a mean of 0 and a standard deviation of 1.
+
+- **`tBodyGyro-mean()-X`**, **`tBodyGyro-mean()-Y`**, **`tBodyGyro-mean()-Z`**: Mean values of body gyroscope signals in the X, Y, and Z directions. Units: Standardized to have a mean of 0 and a standard deviation of 1.
+- **`tBodyGyro-std()-X`**, **`tBodyGyro-std()-Y`**, **`tBodyGyro-std()-Z`**: Standard deviation values of body gyroscope signals in the X, Y, and Z directions. Units: Standardized to have a mean of 0 and a standard deviation of 1.
+
+- **`tBodyGyroJerk-mean()-X`**, **`tBodyGyroJerk-mean()-Y`**, **`tBodyGyroJerk-mean()-Z`**: Mean values of body gyroscope jerk signals in the X, Y, and Z directions. Units: Standardized to have a mean of 0 and a standard deviation of 1.
+- **`tBodyGyroJerk-std()-X`**, **`tBodyGyroJerk-std()-Y`**, **`tBodyGyroJerk-std()-Z`**: Standard deviation values of body gyroscope jerk signals in the X, Y, and Z directions. Units: Standardized to have a mean of 0 and a standard deviation of 1.
+
+- **`tBodyAccMag-mean()`**, **`tBodyAccMag-std()`**: Mean and standard deviation values of body acceleration magnitude. Units: Standardized to have a mean of 0 and a standard deviation of 1.
+- **`tGravityAccMag-mean()`**, **`tGravityAccMag-std()`**: Mean and standard deviation values of gravity acceleration magnitude. Units: Standardized to have a mean of 0 and a standard deviation of 1.
+- **`tBodyAccJerkMag-mean()`**, **`tBodyAccJerkMag-std()`**: Mean and standard deviation values of body acceleration jerk magnitude. Units: Standardized to have a mean of 0 and a standard deviation of 1.
+- **`tBodyGyroMag-mean()`**, **`tBodyGyroMag-std()`**: Mean and standard deviation values of body gyroscope magnitude. Units: Standardized to have a mean of 0 and a standard deviation of 1.
+- **`tBodyGyroJerkMag-mean()`**, **`tBodyGyroJerkMag-std()`**: Mean and standard deviation values of body gyroscope jerk magnitude. Units: Standardized to have a mean of 0 and a standard deviation of 1.
+
+(Include additional variables if present in the data set, following the same format.)
+
+## Steps and Transformations
+
+Here’s a breakdown of the steps I took to clean and tidy the data:
+
+1. **Merged the training and test datasets**: Combined data from the training and test sets to create one big data set.
+2. **Extracted measurements on the mean and standard deviation**: Selected only the measurements that represent the mean and standard deviation for each signal.
+3. **Applied descriptive activity names**: Replaced activity IDs with descriptive names.
+4. **Labeled the data set with descriptive variable names**: Renamed the variables to be more readable and meaningful.
+5. **Created a tidy data set**: Generated a second data set with the average of each variable for each activity and each subject.
+
+## Final Thoughts
+
+I hope this Code Book makes it clear how the data was processed and what each variable represents. If you have any questions or need further clarification, don’t hesitate to ask!
+
+Enjoy exploring the data!
